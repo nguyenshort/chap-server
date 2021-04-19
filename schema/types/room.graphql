@@ -1,0 +1,18 @@
+type Room {
+    _id: ID
+    id: Float!
+    name: String!
+    users: [User!]!
+    avatar: String!
+    sticky: Boolean!
+    createdAt: Float!
+}
+
+input getRoomInput {
+    id: Float!
+}
+
+type Query {
+    room(input: getRoomInput): Room
+    stickyRoom: [Room]
+}
